@@ -1,0 +1,11 @@
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\bin\Debug\102190145_NguyenQuyTrieu.exe.config
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\bin\Debug\102190145_NguyenQuyTrieu.exe
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\bin\Debug\102190145_NguyenQuyTrieu.pdb
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.csprojAssemblyReference.cache
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\_102190145_NguyenQuyTrieu.GUI.Form1.resources
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\_102190145_NguyenQuyTrieu.GUI.Form2.resources
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\_102190145_NguyenQuyTrieu.Properties.Resources.resources
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.csproj.GenerateResource.cache
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.csproj.CoreCompileInputs.cache
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.exe
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.pdb
