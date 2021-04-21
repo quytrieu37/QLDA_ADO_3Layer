@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _102190145_NguyenQuyTrieu.DTO
 {
-    class LSH
+    class LopSH
     {
         public int ID_Lop { get; set; }
         public string NameLop { get; set; }

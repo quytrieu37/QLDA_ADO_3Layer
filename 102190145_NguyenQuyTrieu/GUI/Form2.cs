@@ -26,9 +26,9 @@ namespace _102190145_NguyenQuyTrieu.GUI
         }
         private void SetCBB()
         {
-            foreach (LSH lsh in BLL_QLSV.Instance.GetAllLSH_BLL())
+            foreach (LopSH lsh in BLL_QLSV.Instance.GetAllLSH_BLL())
             {
-                CBB.Items.Add(new LSH()
+                CBB.Items.Add(new LopSH()
                 {
                     ID_Lop = lsh.ID_Lop,
                     NameLop = lsh.NameLop
@@ -44,7 +44,7 @@ namespace _102190145_NguyenQuyTrieu.GUI
             rbMale.Checked = s.Gender;
             rbFemale.Checked = !rbMale.Checked;
             dateTimePicker1.Value = s.NS;
-            foreach(LSH lsh in CBB.Items)
+            foreach(LopSH lsh in CBB.Items)
             {
                 if(lsh.ID_Lop == s.ID_Lop)
                 {
@@ -81,7 +81,7 @@ namespace _102190145_NguyenQuyTrieu.GUI
                 NameSV = txtName.Text,
                 Gender = rbMale.Checked,
                 NS = dateTimePicker1.Value,
-                ID_Lop = ((LSH)CBB.SelectedItem).ID_Lop
+                ID_Lop = ((LopSH)CBB.SelectedItem).ID_Lop
             };
             BLL_QLSV.Instance.AddOrEditSV(s);
             d1();

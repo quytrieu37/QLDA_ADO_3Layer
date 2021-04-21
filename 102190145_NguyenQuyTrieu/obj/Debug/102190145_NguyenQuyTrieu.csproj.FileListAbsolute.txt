@@ -9,3 +9,7 @@ D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\10219
 D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.csproj.CoreCompileInputs.cache
 D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.exe
 D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.pdb
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\bin\Debug\Login.dll
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\bin\Debug\Login.pdb
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\_102190145_NguyenQuyTrieu.GUI.Form3.resources
+D:\thầy phương bách khoa\net ki 3\New folder\102190145_NguyenQuyTrieu\102190145_NguyenQuyTrieu\obj\Debug\102190145_NguyenQuyTrieu.csproj.CopyComplete

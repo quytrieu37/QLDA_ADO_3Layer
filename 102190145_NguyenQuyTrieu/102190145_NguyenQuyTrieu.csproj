@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Login">
+      <HintPath>..\..\..\..\Assembly\Login\Login\bin\Debug\Login.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -50,8 +53,9 @@
     <Compile Include="BLL\BLL_QLSV.cs" />
     <Compile Include="DAL\DAL_QLSV.cs" />
     <Compile Include="DAL\DBHelper.cs" />
-    <Compile Include="DTO\LSH.cs" />
+    <Compile Include="DTO\LopSH.cs" />
     <Compile Include="DTO\SV.cs" />
+    <Compile Include="DTO\SVView.cs" />
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +68,12 @@
     <Compile Include="GUI\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Form1.resx">
@@ -71,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

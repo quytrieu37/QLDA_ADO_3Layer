@@ -24,54 +24,7 @@ namespace _102190145_NguyenQuyTrieu.BLL
             }
             private set { }
         }
-        public List<SV> GetListSV_BLL(int ID_Lop, string textSeach)
-        {
-            List<SV> all = DAL_QLSV.Instance.GetAllSV_DAL();
-            List<SV> result = new List<SV>();
-            if (ID_Lop != 0)
-            {
-                foreach (SV s in all)
-                {
-                    if (s.ID_Lop == ID_Lop)
-                    {
-                        result.Add(s);
-                    }
-                }
-            }
-            if (textSeach == "")
-            {
-                if(ID_Lop ==0)
-                {
-                    return all;
-                }
-                return result;
-            }
-            else
-            {
-                if(ID_Lop==0)
-                {
-                    result.Clear();
-                    foreach(SV s in all)
-                    {
-                        if(s.NameSV.ToLower().Contains(textSeach))
-                        {
-                            result.Add(s);
-                        }    
-                    }
-                    return result;
-                }
-                all.Clear();
-                foreach(SV s in result)
-                {
-                    if (s.NameSV.ToLower().Contains(textSeach))
-                    {
-                        all.Add(s);
-                    }
-                }
-                return all;
-            }
-        }
-        public List<LSH> GetAllLSH_BLL()
+        public List<LopSH> GetAllLSH_BLL()
         {
             return DAL_QLSV.Instance.GetAllLSH_DAL();
         }
@@ -110,17 +63,95 @@ namespace _102190145_NguyenQuyTrieu.BLL
             }
             return null;
         }
-        public LSH GetLSHByIDL(int id_Lop)
+        public List<SVView> GetAllSVView_BLL()
         {
-            List<LSH> list = DAL_QLSV.Instance.GetAllLSH_DAL();
-            foreach (LSH lsh in list)
+            List<SVView> result = new List<SVView>();
+            List<SV> list = DAL_QLSV.Instance.GetAllSV_DAL();
+            List<LopSH> lshs = DAL_QLSV.Instance.GetAllLSH_DAL();
+            string temp = "";
+            foreach (SV sv in list)
             {
-                if (lsh.ID_Lop == id_Lop)
+                foreach (LopSH l in lshs)
                 {
-                    return lsh;
+                    if (l.ID_Lop == sv.ID_Lop)
+                    {
+                        temp = l.NameLop;
+                    }
+                }
+                result.Add(new SVView()
+                {
+                    MSSV = sv.MSSV,
+                    NameSV=sv.NameSV,
+                    Gender= sv.Gender,
+                    NS = sv.NS,
+                    NameLop = temp
+                });
+            }
+            return result;
+        }
+        public List<SVView> GetListSVView_BLL(int ID_Lop, string textSeach)
+        {
+            List<SVView> result = new List<SVView>();
+            List<SVView> all = GetAllSVView_BLL();
+            List<SV> list = DAL_QLSV.Instance.GetAllSV_DAL();
+            List<LopSH> lshs = DAL_QLSV.Instance.GetAllLSH_DAL();
+            string temp = "";
+            if (ID_Lop != 0)
+            {
+                foreach (SV sv in list)
+                {
+                    if(sv.ID_Lop == ID_Lop)
+                    {
+                        foreach (LopSH l in lshs)
+                        {
+                            if (l.ID_Lop == sv.ID_Lop)
+                            {
+                                temp = l.NameLop;
+                            }
+                        }
+                        result.Add(new SVView()
+                        {
+                            MSSV = sv.MSSV,
+                            NameSV = sv.NameSV,
+                            Gender = sv.Gender,
+                            NS = sv.NS,
+                            NameLop = temp
+                        });
+                    }    
                 }
             }
-            return null;
+            if (textSeach == "")
+            {
+                if (ID_Lop == 0)
+                {
+                    return all;
+                }
+                return result;
+            }
+            else
+            {
+                if (ID_Lop == 0)
+                {
+                    result.Clear();
+                    foreach (SVView svv in all)
+                    {
+                        if (svv.NameSV.ToLower().Contains(textSeach))
+                        {
+                            result.Add(svv);
+                        }
+                    }
+                    return result;
+                }
+                all.Clear();
+                foreach (SVView svv in result)
+                {
+                    if (svv.NameSV.ToLower().Contains(textSeach))
+                    {
+                        all.Add(svv);
+                    }
+                }
+                return all;
+            }
         }
         public void DeleteSV(string mssv)
         {
@@ -129,9 +160,9 @@ namespace _102190145_NguyenQuyTrieu.BLL
                 DAL_QLSV.Instance.DeleteSV_DAL(mssv);
             }    
         }
-        public void Sort(List<SV> list, DelSort del)
+        public void Sort(List<SVView> list, DelSort del)
         {
-            SV temp;
+            SVView temp;
             for (int i = 0; i < list.Count; i++)
             {
                 for (int j = i + 1; j < list.Count; j++)

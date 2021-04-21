@@ -41,14 +41,14 @@ namespace _102190145_NguyenQuyTrieu.DAL
             }
             return list;
         }
-        public List<LSH> GetAllLSH_DAL()
+        public List<LopSH> GetAllLSH_DAL()
         {
-            string query = "Select * from LSH";
-            List<LSH> list = new List<LSH>();
+            string query = "Select * from LopSH";
+            List<LopSH> list = new List<LopSH>();
             DataTable dt = DBHelper.Instance.GetRecord(query);
             foreach(DataRow dr in dt.Rows)
             {
-                list.Add(new LSH()
+                list.Add(new LopSH()
                 {
                     ID_Lop = (int)dr["ID_Lop"],
                     NameLop = dr["NameLop"].ToString()
@@ -63,12 +63,12 @@ namespace _102190145_NguyenQuyTrieu.DAL
         }
         public void EditSV_DAL(SV s)
         {
-            string query = $"UPDATE SV SET NameSV = '{s.NameSV}', Gender= '{s.Gender}', NS = '{s.NS}', ID_Lop = '{s.ID_Lop}' WHERE MSSV = {s.MSSV}";
+            string query = $"UPDATE SV SET NameSV = '{s.NameSV}', Gender= '{s.Gender}', NS = '{s.NS}', ID_Lop = '{s.ID_Lop}' WHERE MSSV = '{s.MSSV}'";
             DBHelper.Instance.ExcuteDB(query);
         }
         public void DeleteSV_DAL(string mssv)
         {
-            string query = $"delete from SV where MSSV = {mssv}";
+            string query = $"delete from SV where MSSV = '{mssv}'";
             DBHelper.Instance.ExcuteDB(query);
         }
     }

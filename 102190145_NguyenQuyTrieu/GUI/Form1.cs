@@ -22,14 +22,14 @@ namespace _102190145_NguyenQuyTrieu.GUI
         }
         private void SetCBB()
         {
-            CBBLSH.Items.Add(new LSH()
+            CBBLSH.Items.Add(new LopSH()
             { 
                 ID_Lop =0,
                 NameLop = "All"
             });
-            foreach(LSH lsh in BLL_QLSV.Instance.GetAllLSH_BLL())
+            foreach(LopSH lsh in BLL_QLSV.Instance.GetAllLSH_BLL())
             {
-                CBBLSH.Items.Add(new LSH()
+                CBBLSH.Items.Add(new LopSH()
                 {
                     ID_Lop = lsh.ID_Lop,
                     NameLop = lsh.NameLop
@@ -39,7 +39,8 @@ namespace _102190145_NguyenQuyTrieu.GUI
         }
         public void LoadData()
         {
-            dataGridView1.DataSource = BLL_QLSV.Instance.GetListSV_BLL(((LSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
+            dataGridView1.DataSource = BLL_QLSV.Instance.GetListSVView_BLL(((LopSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
+            dataGridView1.Columns["MSSV"].Visible = false;
         }
         private void btnShow_Click(object sender, EventArgs e)
         {
@@ -90,23 +91,23 @@ namespace _102190145_NguyenQuyTrieu.GUI
 
         private void CBBSortCBB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<SV> list = BLL_QLSV.Instance.GetListSV_BLL(((LSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
+            List<SVView> list = BLL_QLSV.Instance.GetListSVView_BLL(((LopSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
             switch (CBBSortCBB.SelectedIndex)
             {
                 case 0:
-                    BLL_QLSV.Instance.Sort(list, SV.ASCNS);
+                    BLL_QLSV.Instance.Sort(list, SVView.ASCNS);
                     dataGridView1.DataSource = list;
                     break;
                 case 1:
-                    BLL_QLSV.Instance.Sort(list, SV.DESCNS);
+                    BLL_QLSV.Instance.Sort(list, SVView.DESCNS);
                     dataGridView1.DataSource = list;
                     break;
                 case 2:
-                    BLL_QLSV.Instance.Sort(list, SV.ASCNameSV);
+                    BLL_QLSV.Instance.Sort(list, SVView.ASCNameSV);
                     dataGridView1.DataSource = list;
                     break;
                 case 3:
-                    BLL_QLSV.Instance.Sort(list, SV.DESCTenSV);
+                    BLL_QLSV.Instance.Sort(list, SVView.DESCTenSV);
                     dataGridView1.DataSource = list;
                     break;
             }
@@ -114,23 +115,23 @@ namespace _102190145_NguyenQuyTrieu.GUI
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            List<SV> list = BLL_QLSV.Instance.GetListSV_BLL(((LSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
+            List<SVView> list = BLL_QLSV.Instance.GetListSVView_BLL(((LopSH)CBBLSH.SelectedItem).ID_Lop, txtSeach.Text);
             switch (CBBSortCBB.SelectedIndex)
             {
                 case 0:
-                    BLL_QLSV.Instance.Sort(list, SV.ASCNS);
+                    BLL_QLSV.Instance.Sort(list, SVView.ASCNS);
                     dataGridView1.DataSource = list;
                     break;
                 case 1:
-                    BLL_QLSV.Instance.Sort(list, SV.DESCNS);
+                    BLL_QLSV.Instance.Sort(list, SVView.DESCNS);
                     dataGridView1.DataSource = list;
                     break;
                 case 2:
-                    BLL_QLSV.Instance.Sort(list, SV.ASCNameSV);
+                    BLL_QLSV.Instance.Sort(list, SVView.ASCNameSV);
                     dataGridView1.DataSource = list;
                     break;
                 case 3:
-                    BLL_QLSV.Instance.Sort(list, SV.DESCTenSV);
+                    BLL_QLSV.Instance.Sort(list, SVView.DESCTenSV);
                     dataGridView1.DataSource = list;
                     break;
             }
